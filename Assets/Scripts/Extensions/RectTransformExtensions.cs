@@ -19,7 +19,7 @@ namespace Extensions
             var diffPivot = targetPivot - rectTransform.pivot;
             rectTransform.pivot = targetPivot;
             var diffPos = new Vector2(rectTransform.sizeDelta.x * diffPivot.x, rectTransform.sizeDelta.y * diffPivot.y);
-            diffPos = rectTransform.rotation * diffPos;
+            diffPos = rectTransform.localRotation * diffPos;
             rectTransform.anchoredPosition += diffPos;
         }
         /// <summary>
