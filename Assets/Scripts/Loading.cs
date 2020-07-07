@@ -11,7 +11,14 @@ public class Loading : MonoBehaviour
     [SerializeField] private Image[] secondPoints;
     [SerializeField] private Image[] ripples;
     
+    /// <summary>
+    /// 全体のサイズ
+    /// </summary>
     private Vector2 size;
+    
+    /// <summary>
+    /// 点のサイズ
+    /// </summary>
     private const float POINT_SIZE = 24f;
 
     private void Start()
@@ -20,6 +27,9 @@ public class Loading : MonoBehaviour
         PlayAnimation();
     }
 
+    /// <summary>
+    /// アニメーションを再生する
+    /// </summary>
     private void PlayAnimation()
     {
         for (var i = 0; i < 2; i++)
@@ -56,6 +66,12 @@ public class Loading : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 初期化処理
+    /// </summary>
+    /// <param name="firstPoint">最初の点</param>
+    /// <param name="secondPoint">2番目の点</param>
+    /// <param name="ripple">波紋エフェクト</param>
     private void Initialize(Image firstPoint, Image secondPoint, Image ripple)
     {
         firstPoint.gameObject.SetActive(true);

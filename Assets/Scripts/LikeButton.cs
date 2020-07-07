@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using DG.Tweening.Plugins.Options;
 using Extensions;
 using TMPro;
 using UnityEngine;
@@ -15,6 +16,8 @@ public class LikeButton : MonoBehaviour, IPointerDownHandler
 
     private bool isLike;
     private Sequence sequence;
+    
+    
     private Vector2[] defaultLinePositions;
 
     private void Start()
@@ -27,7 +30,7 @@ public class LikeButton : MonoBehaviour, IPointerDownHandler
 
         isLike = false;
         Inactivate();
-        sequence.Complete();
+        sequence?.Complete(true);
     }
 
     /// <summary>
@@ -78,6 +81,9 @@ public class LikeButton : MonoBehaviour, IPointerDownHandler
     {
         sequence?.Complete();
 
+        var inactiveColor = inactiveIcon.color;
+        inactiveColor.a = 1;
+        
         sequence = DOTween.Sequence()
             .OnStart(() =>
             {
@@ -92,7 +98,7 @@ public class LikeButton : MonoBehaviour, IPointerDownHandler
             })
             .Append(background.DOFade(0, 0.28f))
             .Join(background.rectTransform.DOScale(1f, 0.1f))
-            .Join(likeText.DOColor(inactiveIcon.color, 0.2f))
+            .Join(likeText.DOColor(inactiveColor, 0.2f))
             .Join(activeIcon.DOFade(0, 0.2f));
     }
 }
