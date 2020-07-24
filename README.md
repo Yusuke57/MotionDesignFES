@@ -8,7 +8,7 @@
   
 
 このプロジェクトの簡単な解説記事 **（是非ご覧ください！）**  
-[https://game-ui.net/?p=971](https://game-ui.net/?p=971)  
+[https://game-ui.net/?p=975](https://game-ui.net/?p=975)  
 
 Motion Design Festival 公式サイト  
 [https://motion.cocoda.design/](https://motion.cocoda.design/)   
