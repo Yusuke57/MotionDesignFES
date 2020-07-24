@@ -30973,7 +30973,7 @@ GameObject:
   - component: {fileID: 1758274558}
   - component: {fileID: 1758274557}
   m_Layer: 5
-  m_Name: 404
+  m_Name: Page404
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
