@@ -62,3 +62,6 @@ crashlytics-build.properties
 .idea/
 Assets/ExternalAssets.meta
 Assets/ExternalAssets/*
+Assets/Resources.meta
+Assets/Resources/*
+*.ai
